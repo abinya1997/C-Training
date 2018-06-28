@@ -93,21 +93,21 @@ Returns:
 
 */
 struct Node * insert(struct Node *phead, int new_data)
-{
+	{
 	int  af_no;
 	int ch;
 
 	if (phead == NULL)
-	{
+		{
 		struct Node *pnew_node = (struct Node*)malloc(sizeof
 		(struct Node));
 		pnew_node->data = new_data;
 		pnew_node->next = pnew_node;
 		phead = pnew_node;
 		size_list++;
-	}
+		}
 	else
-	{
+		{
 		printf("enter choice to insert\n");
 		printf("1.insert begining 2.insert last 3.insert after\n");
 		scanf_s("%d", &ch);
@@ -178,18 +178,19 @@ Returns:
 	struct Node
 */
 struct Node * delete_node(struct Node * phead, int del_no)
-{
-	struct Node *ptemp = phead;
-
-	while (ptemp->next->data != del_no)
 	{
+	struct Node *ptemp;
+	
+	ptemp = phead;
+	while (ptemp->next->data != del_no)
+		{
 		ptemp = ptemp->next;
-	}
+		}
 	ptemp->next = ptemp->next->next;
 	if (del_no == phead->data)
 		phead = ptemp->next;
 	return phead;
-}
+	}
 
 /*
 Name:
@@ -210,16 +211,16 @@ Returns:
 	Nothing
 */
 void display(struct Node *phead)
-{
+	{
 	struct Node *ptemp;
 
 	ptemp = phead;
 	do
-	{
+		{
 		printf("%d", ptemp->data);
 		ptemp = ptemp->next;
-	} while (ptemp != phead);
-}
+		} while (ptemp != phead);
+	}
 
 /*
 Name:
@@ -240,7 +241,7 @@ Returns:
 
 */
 void main()
-{
+	{
 	int ch;
 	int del_no;
 	int new_data;
