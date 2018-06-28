@@ -25,7 +25,7 @@ Author:
 	Abinaya P, MCCI May 2018
 
 Revision history:
-	1.00A Tue May 14 2018 10:30:00 Abinaya
+	1.00A Mon May 14 2018 10:30:00 Abinaya
 	Module created.
 */
 #include<stdio.h>
