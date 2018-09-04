@@ -100,4 +100,3 @@ void Factorial()
 		}
 	printf("%d", fac);
 	}
-	}
